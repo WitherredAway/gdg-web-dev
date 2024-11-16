@@ -1,0 +1,97 @@
+body,
+html {
+    padding: 2.5px 5.3px;
+    font-family: Arial, sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Navigation bar */
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    font-size: 1em;
+    background-color: white;
+    padding: 1px 20px;
+    border: 3px solid #dfdfdf;
+    border-radius: 18px;
+}
+
+/* Navigation logo; PUREM ODA */
+.nav-logo {
+    color: black;
+    font-weight: 900;
+    line-height: 0.9em;
+    letter-spacing: 1%;
+}
+
+/* Navigation link div containing items */
+.nav-link-div a {
+    color: black;
+    text-decoration: none;
+    margin-left: 2em;
+    border-radius: 10px;
+    font-size: 0.85em;
+    font-weight: 700;
+}
+
+/* Navigation link items; WOMENSWEAR, MENSWEAR, etc */
+.nav-li {
+    list-style: none;
+    display: inline-block;
+}
+
+/* Navigation buttons div containing Search, Favourites and Cart */
+.nav-buttons-div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5em;
+}
+
+/* Navigation search input */
+.nav-search-div {
+    display: flex;
+    background-color: #f5f5f5;
+    color: #dddddd;
+    padding: 0.2em;
+    border: none;
+    border-radius: 100px;
+    width: 7.5em;
+}
+
+.nav-search-icon {
+    width: 15%;
+    height: auto;
+    margin-left: 5%;
+}
+
+.nav-search {
+    background-color: transparent;
+    padding: 0.2em;
+    border: none;
+    border-radius: 100px;
+    outline: none;
+}
+
+.nav-search::placeholder {
+    color: #cccccc;
+    padding: 0.2em;
+}
+
+.cart-bubble {
+    position: absolute;
+    top: 2.5em;
+    right: 4em;
+    background-color: #ff4284;
+    color: white;
+    border-radius: 100%;
+    padding: 1px 4px;
+    font-size: 10px;
+    font-weight: bold;
+}
