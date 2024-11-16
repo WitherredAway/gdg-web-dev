@@ -60,7 +60,7 @@ img {
     gap: 0.5em;
 }
 
-/* Navigation search input */
+/* Navigation search input box */
 .nav-search-div {
     display: flex;
     background-color: #f5f5f5;
@@ -95,11 +95,13 @@ img {
     font-size: 1vw;
 }
 
+/* The cart icon */
 .nav-cart {
     display: flex;
     width: 2vw;
 }
 
+/* The red bubble showing the no. of cart items */
 .cart-bubble {
     position: relative;
     bottom: 0.2vw;
@@ -110,4 +112,57 @@ img {
     border-radius: 100%;
     padding: 0.05vw 0.3vw;
     font-weight: bold;
+}
+
+/* Main boxes */
+.boxes {
+    display: flex;
+    padding-top: 1%;
+    gap: 0.7%;
+}
+
+.box-group-1,
+.box-group-2 {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 0.5%;
+    flex-direction: column;
+    width: 50%;
+    height: 58vw;
+}
+
+/* The first box group contains the 1st box and the smaller 2 under it */
+.box1 {
+    background-color: #dad9d5;
+    height: 38vw;
+    border-radius: 5%;
+}
+
+/* Subgroup holding the smaller two boxes */
+.box-subgroup-1 {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    height: 19.3vw;
+}
+
+/* Small box 1 */
+.box2 {
+    background-color: #b0b0b0;
+    width: 49.5%;
+    border-radius: 10%;
+}
+
+/* Small box 2 */
+.box3 {
+    background-color: #5f6b64;
+    width: 49.5%;
+    border-radius: 10%;
+}
+
+/* The second box group contains the 4th, largest box */
+.box4 {
+    background-color: #d4d8d5;
+    height: 100%;
+    border-radius: 5%;
 }
