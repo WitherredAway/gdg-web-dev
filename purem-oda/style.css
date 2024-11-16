@@ -90,9 +90,25 @@ img {
 .nav-search::placeholder {
     color: #cccccc;
     padding-left: 0.2vw;
-    padding-top: 1vw;
-    padding-bottom: 1vw;
     font-size: 1vw;
+}
+
+@media (max-width: 1000px) {
+    .nav-search::placeholder {
+        font-size: 0.8em; /* Smaller placeholder for small screens */
+    }
+}
+
+@media (max-width: 700px) {
+    .nav-search::placeholder {
+        font-size: 0.75em; /* Smaller placeholder for smaller screens */
+    }
+}
+
+@media (max-width: 550px) {
+    .nav-search::placeholder {
+        font-size: 0em; /* Remove placeholder entirely for really small screens */
+    }
 }
 
 /* The cart icon */
