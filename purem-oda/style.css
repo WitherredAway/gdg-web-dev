@@ -135,7 +135,7 @@ img {
 .boxes {
     display: flex;
     padding-top: 1%;
-    gap: 0.7%;
+    gap: 0.5%;
 }
 
 .box-group-1,
@@ -145,13 +145,14 @@ img {
     padding-top: 0.5%;
     flex-direction: column;
     width: 50%;
-    height: 58vw;
+    height: 57.7vw;
+    gap: 0.89%;
 }
 
 /* The first box group contains the 1st box and the smaller 2 under it */
 .box1 {
     background-color: #dad9d5;
-    height: 38vw;
+    height: 38vw;;
     border-radius: 5%;
 }
 
@@ -160,7 +161,7 @@ img {
     display: flex;
     justify-content: space-between;
     flex-direction: row;
-    height: 19.3vw;
+    height: 19.5vw;
 }
 
 /* Small box 1 */
