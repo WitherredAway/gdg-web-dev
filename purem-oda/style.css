@@ -2,15 +2,15 @@ body,
 html {
     padding: 2.5px 5.3px;
     font-family: Arial, sans-serif;
+    background-color: #efefef;
 }
 
 a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-decoration: none;
-}
-
-img {
-    width: 2vw;
-    max-width: 2vw;
+    -webkit-tap-highlight-color: transparent;
 }
 
 /* Navigation bar */
@@ -20,36 +20,87 @@ img {
     justify-content: space-between;
     align-items: center;
     overflow-x: hidden;
+    overflow-y: hidden;
 
-    font-size: 1.2vw;
-    background-color: white;
-    padding: 0.25vw 1vw;
-    border: 3px solid #dfdfdf;
-    border-radius: 18px;
+    font-size: 13px;
+    height: 40px;
+    padding: 7px 17px;
+    padding-left: 20px;
 }
 
 /* Navigation logo; PUREM ODA */
-.nav-logo {
+#nav-logo {
     color: black;
-    font-size: 1.3vw;
+    font-size: 16px;
     font-weight: 900;
-    line-height: 1.2vw;
-    letter-spacing: 1%;
+    line-height: 16px;
+    letter-spacing: 0px;
 }
 
 /* Navigation link div containing items */
-.nav-link-div a {
-    color: black;
+.nav ul a {
+    color: #717b8d;
     text-decoration: none;
-    margin-left: 2em;
-    border-radius: 10px;
     font-weight: 700;
+    font-family: sans-serif;
 }
 
 /* Navigation link items; WOMENSWEAR, MENSWEAR, etc */
-.nav-li {
+.nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.nav li {
     list-style: none;
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 4px;
+}
+
+/* New morphism on all nav bar buttons */
+.nav,
+.nav-buttons-div > div,
+.nav li {
+    border-radius: 100px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2), -2px -2px 5px white;
+}
+
+.nav-buttons-div > div,
+.nav li {
+    height: 25px;
+}
+
+.nav-buttons-div > div:hover,
+.nav li:hover {
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2) inset, -2px -2px 5px white inset;
+}
+
+/* Navigation menu, for smaller screens */
+select[name="pages"],
+#select-div {
+    display: none;
+}
+
+@media (max-width: 860px) {
+    .nav ul {
+        display: none;
+    }
+
+    select[name="pages"] {
+        display: inline-block;
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        opacity: 0;
+    }
+
+    #select-div {
+        display: flex;
+    }
 }
 
 /* Navigation buttons div containing Search, Favourites and Cart */
@@ -57,29 +108,67 @@ img {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 0.5em;
+    gap: 10px;
+}
+
+.nav-buttons-div img {
+    width: 20px;
+    height: auto;
+}
+
+.nav-buttons-div > div:not(.nav-search-div) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+}
+
+/* The red bubble showing the no. of cart items */
+.nav-cart-div,
+#select-div {
+    position: relative;
+}
+
+.menu-icon {
+    position: absolute;
+}
+
+.cart-bubble {
+    background-color: #ff4284;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    translate: 10% -10%;
+
+    height: 10px;
+    width: 10px;
+
+    font-size: 8px;
+    font-weight: bold;
 }
 
 /* Navigation search input box */
 .nav-search-div {
-    display: flex;
-    background-color: #f5f5f5;
     color: #dddddd;
-    padding: 0.2em;
-    border: none;
+    display: flex;
+    width: 115px;
+    padding-left: 4px;
     border-radius: 100px;
-    width: 9vw;
-    height: 2.3vw;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1), -2px -2px 5px white;
 }
 
-.nav-search-icon {
-    width: 1.5vw;
-    height: auto;
-    margin-left: 5%;
+.nav-search-div:has(.nav-search:focus) {
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1) inset, -2px -2px 5px white inset;
 }
 
 .nav-search {
-    width: 5vw;
+    width: 90px;
     background-color: transparent;
     padding: 0.2em;
     border: none;
@@ -89,60 +178,14 @@ img {
 
 .nav-search::placeholder {
     color: #cccccc;
-    padding-left: 0.2vw;
-    font-size: 1vw;
+    padding-left: 4px;
+    font-size: 12px;
 }
 
-/* Smaller placeholder for smaller screens */
-@media (max-width: 1000px) {
-    .nav-search::placeholder {
-        font-size: 0.8em;
+@media (max-width: 330px) {
+    .nav-search-div {
+        display: none;
     }
-}
-
-@media (max-width: 700px) {
-    .nav-search::placeholder {
-        font-size: 0.75em;
-    }
-}
-
-@media (max-width: 680px) {
-    .nav-search::placeholder {
-        font-size: 0.7em;
-    }
-}
-
-@media (max-width: 660px) {
-    .nav-search::placeholder {
-        font-size: 0.65em;
-    }
-}
-
-/* Remove placeholder entirely for really small screens */
-@media (max-width: 550px) {
-    .nav-search::placeholder {
-        font-size: 0em;
-    }
-}
-
-/* The cart icon */
-.nav-cart {
-    display: flex;
-    width: 2vw;
-}
-
-/* The red bubble showing the no. of cart items */
-.cart-bubble {
-    position: relative;
-    bottom: 0.2vw;
-    right: 1.1vw;
-    height: 1.1vw;
-    background-color: #ff4284;
-    color: white;
-    border-radius: 100%;
-    padding: 0.05vw 0.35vw;
-    font-size: 0.8em;
-    font-weight: bold;
 }
 
 /* Main boxes */
