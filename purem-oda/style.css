@@ -248,8 +248,8 @@ select[name="pages"],
 
     position: absolute;
     margin: 0;
-    top: 3vw;
-    left: 3vw;
+    top: 7%;
+    left: 6%;
 }
 
 #box1 > #line2 {
@@ -258,9 +258,9 @@ select[name="pages"],
 
     position: absolute;
     margin: 0;
-    left: 3vw;
-    bottom: 3vw;
-    right: 3vw;
+    left: 6%;
+    bottom: 7%;
+    right: 6%;
 }
 
 #arrow1 {
@@ -302,8 +302,8 @@ select[name="pages"],
     position: absolute;
     margin: 0;
     padding: 0;
-    left: 2vw;
-    bottom: 1vw;
+    left: 7%;
+    bottom: 5%;
 }
 
 /* Small box 2 */
