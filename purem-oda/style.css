@@ -288,15 +288,35 @@ select[name="pages"],
 
 #box2 {
     background-color: #b0b0b0;
+    background-image: url(images/box2.jpeg);
+    background-size: cover;
+
+    position: relative;
+}
+
+.small-box-text {
+    color: #f9f9f9;
+    font-size: 2vw;
+    font-weight: 900;
+
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    left: 2vw;
+    bottom: 1vw;
 }
 
 /* Small box 2 */
 #box3 {
-    background-color: #5f6b64;
+    background-image: url(images/box3.jpeg);
+    background-size: cover;
+
+    position: relative;
 }
 
 /* The second box group contains the 4th, largest box */
 #box4 {
-    background-color: #d4d8d5;
+    background-image: url(images/box4.jpeg);
+    background-size: cover;
     height: 100%;
 }
