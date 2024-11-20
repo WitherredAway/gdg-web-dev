@@ -2,6 +2,11 @@
     --card-gap: 9px;
 }
 
+@font-face {
+    font-family: "oddval";
+    src: url(fonts/oddval-extrabold.otf);
+}
+
 body,
 html {
     padding: 2.5px 5.3px;
@@ -68,15 +73,15 @@ nav li {
     border-radius: 5px;
 }
 
+nav li,
+#nav-buttons-div > div {
+    height: 25px;
+}
+
 /* Neumorphism on all nav bar buttons */
 .shadow {
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1),
         -2px -2px 5px rgba(255, 255, 255, 0.9);
-}
-
-nav li,
-#nav-buttons-div > div {
-    height: 25px;
 }
 
 .shadow:hover:not(nav) {
@@ -228,8 +233,41 @@ select[name="pages"],
 }
 
 #box1 {
+    display: inline-block;
+    justify-content: left;
     background-color: #dad9d5;
+    position: relative;
     height: 38vw;
+}
+
+#box1 > #line1 {
+    width: fit-content;
+    font-family: oddval;
+    font-size: 5vw;
+    line-height: 5.5vw;
+
+    position: absolute;
+    margin: 0;
+    top: 3vw;
+    left: 3vw;
+}
+
+#box1 > #line2 {
+    width: fit-content;
+    font-size: 1.3vw;
+
+    position: absolute;
+    margin: 0;
+    left: 3vw;
+    bottom: 3vw;
+    right: 3vw;
+}
+
+#arrow1 {
+    vertical-align: middle;
+    height: 1.3vw;
+    padding-left: 2vw;
+    padding-bottom: 1vw;
 }
 
 /* Subgroup holding the smaller two boxes */
