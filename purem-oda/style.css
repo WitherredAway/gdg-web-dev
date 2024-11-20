@@ -1,5 +1,6 @@
 :root {
     --card-gap: 9px;
+    --bg-color: #efefef;
 }
 
 @font-face {
@@ -11,7 +12,7 @@ body,
 html {
     padding: 2.5px 5.3px;
     font-family: sans-serif;
-    background-color: #efefef;
+    background-color: var(--bg-color);
 }
 
 a {
@@ -79,7 +80,7 @@ nav li,
 }
 
 /* Neumorphism on all nav bar buttons */
-.shadow {
+.shadow:not(.box-button) {
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1),
         -2px -2px 5px rgba(255, 255, 255, 0.9);
 }
@@ -347,4 +348,58 @@ select[name="pages"],
     color: rgba(255, 255, 255, 0.4);
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3) inset,
         -2px -2px 5px rgba(255, 255, 255, 0.2) inset;
+}
+
+#box4-buttons {
+    position: absolute;
+    right: 4%;
+    bottom: 3%;
+
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+#box4-buttons a {
+    justify-content: left;
+    padding-left: 1.4vw;
+    padding-right: 0.1vw;
+
+    border-radius: 100px;
+    height: 3vw;
+    width: 15.5vw;
+
+    font-size: 1vw;
+    font-weight: 600;
+
+    justify-content: space-between;
+}
+
+#box4-buttons img {
+    border-radius: 50%;
+    height: 93%;
+    width: auto;
+}
+
+#box4-buttons #learn-more {
+    background-color: var(--bg-color);
+    border: 2px solid var(--bg-color);
+
+    color: black;
+}
+
+#box4-buttons #learn-more img {
+    background-color: black;
+}
+
+#box4-buttons #contact-us {
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    border: 2px solid rgba(255, 255, 255, 0.8);
+
+    color: rgba(255, 255, 255, 0.9);
+}
+
+#box4-buttons #contact-us img {
+    background-color: rgba(255, 255, 255, 0.9);
 }
